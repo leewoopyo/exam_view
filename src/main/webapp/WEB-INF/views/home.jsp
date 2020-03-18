@@ -2,6 +2,7 @@
 <%@page import="com.exam.view.domain.ExamRIO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!-- jstl 사용하기 위해서 아래처럼 적어준다. -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <%@ page import="com.exam.*" %>
@@ -17,13 +18,15 @@
 주소 : ${addr} <br>
 
 <!-- 데이블 생성 -->
-<!-- 안에서 데이터를 뿌려줄것임 -->
+<!-- 안에서 모델에 담긴 데이터를 뿌려줄것임 -->
+<!-- c:~~ 로 시작하는 태그는 jstl태그이다. -->
 <!-- c:choose 태그는 다중 조건을 처리할 때 씀 -->
-<!-- c:choose 안에서 when과 otherwise사용하면서 조건을 처리-->
+<!-- c:choose 안에서 when과 otherwise 사용하면서 조건을 처리-->
 <!-- when조건 사용시 test적어줌 -->
 <!-- 조건 안에 empty는 "~없을 때" 라는 조건이다.-->
 <!-- 그리고 examRIO형의 데이터를 가져오는데 controller에서 넣을때 attribute이름을 exam이라 지었다. -->
 <!-- 그래서 examRIO형의 exam.get....()로 getter메소드를 가져올 수 있는 것이다. -->
+
 <hr>
 <table cellspacing=1 width=600 border=1>
 	<c:choose>

@@ -22,7 +22,6 @@ public class ExamRIO {
 		this.mat = mat;
 	}
 	
-	
 	//getter, setter 메소드 생성 : 데이터를 불러오고 적용할 때 사용한다. 
 	public String getName() {
 		return name;
